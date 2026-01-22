@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>D-Escape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="image/icon.jpg">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:  100vh;
+            margin: 0;
+            background-image: url(image/background_image3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+        .main-container {
+            display: flex;
+            gap: 10px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 10px;
+        }
+        .panel1 {
+            width: 350px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: 20px;
+            padding: 20px;
+            border: 2px solid #5c5c5c;
+        }
+        .panel2 {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: 20px;
+            padding: 10px;
+            border: 2px solid #5c5c5c;
+        }
+        .panel2 img {
+            width: 100px;
+            height: 100px;
+        }
+        button {
+            background: 0;
+            border: 0;
+        }
+        button:hover {
+            background-color: #5c5c5c;
+        }
+        .button {
+            width: 100px;
+            height: 60px;
+            font-size: 0.5em;
+            margin-top: auto;
+            background: 10px;
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="panel1">
+            <h2><span id="set_chara">swordsman</span></h2>
+            <h3>hp:  <span id="set_hp">100</span></h3>
+            <h3>mp:  <span id="set_mp">50</span></h3>
+            <h3>ATK: <span id="set_atk">1</span></h3>
+            <h3>DEF: <span id="set_def">2</span></h3>
+        </div>
+        <div class="panel2">
+            <button id="chara_select_swordsman">
+                <img src="character/swordsman.png">
+            </button>
+            <button id="chara_select_sorcerer">
+                <img src="character/sorcerer.png">
+            </button>
+        </div>
+        <button class="button" id="select">表示キャラを選択</button>
+    </div>
+    <script type="module" src="character_select.js"></script>
+</body>
+</html>

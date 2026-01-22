@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>D-Escape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="image/icon.jpg">
+    <style>
+        canvas {
+            max-width: 95vw;  /* 画面横幅の95%に収める */
+            max-height: 90vh; /* 画面高さの80%に収める */
+            object-fit: contain; /* アスペクト比を維持してフィットさせる */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:  100vh;
+            margin: 0;
+            background-image: url(image/background_image4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+        .main-container {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px; 
+        }
+        .ui-panel {
+            width: 200px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background: #222;
+            padding: 20px;
+            border: 2px solid #5C4016;
+        }
+        .bar {
+            width: 100%;
+            height: 20px;
+            background: #444;
+            border: 1px solid #000;
+        }
+        .fill {
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .hp { background: #3ce73c; width: 100%;}
+        .mp { background: #3498db; width: 100%;}
+
+        #minimapCanvas {
+            width: 190px;
+            height: 190px;
+            background: #000;
+            border: 1px solid #fff;
+        }
+        .button {
+            display: none; 
+            padding: 15px 25px;
+            font-size: 10px;
+            cursor: pointer;
+            background-color: #5c5c5c;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        .next {
+            display: none;
+        }
+        .get {
+            display: none;
+        }
+        .save {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="ui-panel">
+            <h3><span id="level"></span>階層</h3>
+            <div class="minimap-box">
+                <h3>Mini Map</h3>
+                <canvas id="minimapCanvas"></canvas>
+            </div>
+        </div>
+        <div class="game-view">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="ui-panel">
+            <div class="status-box">
+                <h3>Player Status</h3>
+                <div class="bar-container">
+                    <p>HP: <span id="hp_cur">100</span> / <span id="hp_max">100</span></p>
+                    <div class="bar"><div id="hp-bar" class="fill hp"></div></div>
+                </div>
+                <div class="bar-container">
+                    <p>MP: <span id="mp_cur">100</span> / <span id="mp_max">100</span></p>
+                    <div class="bar"><div id="mp-bar" class="fill mp"></div></div>
+                </div>
+            </div>
+            <div>
+                <button class="button save" id="save">save(wでも可)</button>
+                <button class="button get" id="getItem">アイテムを拾う(shiftでも可)</button>
+                <button class="button next" id="nextButton">次の階層へ(enterでも可)</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
