@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>D-Escape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="image/icon.jpg">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 5px;
+
+            background-image: url(image/background_image2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+
+            text-align: center;
+        }
+        .game-title {
+            font-size: 6.0em;
+            font-weight: 900;
+            background: linear-gradient(to bottom, #f3d990, #473416);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 8px rgba(185, 145, 80, 0.6));
+            -webkit-text-stroke: 0.5px #5C4016;
+
+            display: flex;
+            margin-left: 8%;
+            margin-bottom: 5%;
+        }
+        .link-container {
+            max-width: 300px;
+            display: flex;
+            margin-left: auto;
+            margin-right: 8%;
+            gap: 15px;
+            padding: 20px;
+        }
+        .game_start-container {
+            max-width: 350px;
+            display: flex;
+            margin-left: auto;
+            margin-right: 5%;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .button {
+            display: block;
+            background-color: rgba(0,0,0,0.6);
+            color: rgb(255, 255, 255,0.7);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            transform: skew(-20deg);
+        }
+        .button:hover {
+            background-color: #aaaeb2;
+        }
+        .large {
+            padding: 30px 30px;
+            font-size: 2.2em;
+        }
+        .small {
+            padding: 10px 15px;
+            font-size: 0.8em;
+        }
+        .icom {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .icom img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head> 
+<body>
+    <h1 class="game-title">D-Escape</h1>
+    <div class="game_start-container">
+        <a href="game.html?mode=B" class="button large" style="padding: 30px 30px;font-size: 2.2em;">ゲーム再開</a>
+    </div>
+    <div class="link-container">
+        <a href="game.html?mode=A" class="button small">初めから開始</a>
+        <a href="character_select.html" class="button small">キャラタイプ変更</a>
+    </div>
+    <div class="icom">
+        <a href="setting.html">
+            <img src="image/setting_black.png" alt="設定">
+        </a>
+        <a href="guide.html">
+            <img src="image/question_black.png" alt="ヘルプ">
+        </a>
+    </div>
+</body>  
+</html>
