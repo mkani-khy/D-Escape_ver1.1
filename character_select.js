@@ -1,5 +1,20 @@
 import { swordsman,sorcerer } from "./charadata.js";
 
+const back_link = () => {
+    window.location.href = "/index.html"
+}
+const go_game = () => {
+    window.location.href = "/game.thml"
+}
+document.addEventListener('keydown',(event) => {
+    if (event.key === 'q') {
+        back_link();
+    }
+    if (event.key === 'eneter') {
+        go_game();
+    }
+})
+
 function state_write(chara){
     document.getElementById("set_chara").innerText = chara.name;
     document.getElementById("set_hp").innerText = chara.hp;

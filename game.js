@@ -112,7 +112,7 @@ const waitImg = (img) => new Promise(resolve => {
 });
 //タイトル戻し
 const back_link = () => {
-    window.location.href = "/index light.html"
+    window.location.href = "/index.html"
 }
 
 //操作
