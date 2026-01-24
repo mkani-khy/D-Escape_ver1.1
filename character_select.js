@@ -1,10 +1,10 @@
-import { swordsman,sorcerer } from "./charadata.js";
+import { swordsman,sorcerer } from ".charadata.js";
 
 const back_link = () => {
-    window.location.href = "/index.html"
+    window.location.href = "index.html"
 }
 const go_game = () => {
-    window.location.href = "/game.thml"
+    window.location.href = "game.thml"
 }
 document.addEventListener('keydown',(event) => {
     if (event.key === 'q') {
