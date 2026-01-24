@@ -82,7 +82,7 @@ const charaDataJson = localStorage.getItem("selectedCharacter");
 const ply_slc = JSON.parse(charaDataJson);
 if (!ply_slc) {
     //キャラクター選択画面へ飛ばす
-    window.location.href = "character_select.html";
+    window.location.href = "D-Escape_ver1.1/character_select.html";
 }
 let player = playerSet(ply_slc.hp,ply_slc.mp,ply_slc.atk,ply_slc.def);
 player.img.src = ply_slc.img;
@@ -112,7 +112,7 @@ const waitImg = (img) => new Promise(resolve => {
 });
 //タイトル戻し
 const back_link = () => {
-    window.location.href = "index.html";
+    window.location.href = "D-Escape_ver1.1/index.html";
 }
 
 //操作
